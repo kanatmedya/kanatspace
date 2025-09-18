@@ -1,0 +1,27 @@
+.notice {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width:100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    position: relative; /* Silme ikonunun konumunu ayarlamak için */
+    opacity: 1; /* Yorumlar başlangıçta görünmez */
+    transition: opacity 0.5s ease-in-out; /* Geçiş animasyonu */
+    background-color: #d1e7dd;
+    align-self: flex-end;
+    text-align: left;
+}
+.notice .username {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.notice .text {
+    
+}
+.notice .date {
+    font-size: 10px;
+    color: #666;
+    /*margin-top: 5px;*/
+    text-align: right;
+}

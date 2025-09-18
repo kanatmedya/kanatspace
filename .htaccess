@@ -1,0 +1,6 @@
+Options -Indexes
+RewriteEngine on
+
+# PHP dosyalarını HTML gibi göster
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]

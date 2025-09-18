@@ -1,0 +1,88 @@
+/* Modal içeriği */
+.projectAddModal-Content {
+    background-color: #fefefe; 
+    margin: 3% auto !important;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+	overflow: auto;
+	transition: opacity 1s ease;
+}
+
+.ui-autocomplete {
+     position: absolute;
+     background-color: white;
+     border: 1px solid #ddd;
+     max-height: 200px;
+     overflow-y: auto;
+     overflow-x: hidden;
+     z-index: 1000;
+ }
+
+.ui-menu-item {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.ui-menu-item:hover {
+    background-color: #f0f0f0;
+}
+
+ .profile-container {
+     display: flex;
+     flex-wrap: wrap;
+     margin-bottom: 20px;
+ }
+.profile {
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.profile .remove-user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.profile:hover .remove-user {
+    opacity: 1;
+}
+.profile img:hover {
+    opacity: 0.7;
+}
+.profile .tooltip {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 1;
+    white-space: nowrap;
+}
+.profile:hover .tooltip {
+    display: block;
+}

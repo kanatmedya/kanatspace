@@ -1,0 +1,234 @@
+/* Özel stil tanımlamaları */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Scrollbar stilini özelleştirme */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Scrollbar gizleme (sepet kaydırma alanı için) */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+/* Tablo başlığını sabitleme */
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Aktif sepet butonu vurgusu */
+.cart-active {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Kategori seçiminde aktif vurgu */
+.category-item.active {
+    background-color: #e3f2fd;
+}
+
+/* Tam ekran modu */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+}
+
+/* Inputlar için genel stil */
+input:focus, select:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Animasyon efekti */
+.added {
+    animation: added-animation 0.5s ease-in-out;
+}
+
+@keyframes added-animation {
+    0% {
+        background-color: #f0fff4;
+    }
+    50% {
+        background-color: #c6f6d5;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+/* Sepet butonları kaydırma alanı */
+#cartButtonsScroll {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    cursor: grab; /* El imleci göster */
+    -webkit-user-select: none; /* Metin seçimini engelle */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-y: hidden;
+}
+
+#cartButtonsScroll:active {
+    cursor: grabbing; /* Kaydırma sırasında "tutuyor" imleci göster */
+}
+
+#cartButtonsScroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+/* Sepet butonları konteyneri */
+#cartButtonsContainer {
+    min-width: 100%;
+    display: inline-flex;
+}
+
+/* Sepet butonlarının her biri için min-width tanımla */
+#cartButtonsContainer button {
+    flex-shrink: 0; /* Butonların sıkışmamasını sağla */
+    min-width: 85px; /* Min genişlik */
+    white-space: nowrap; /* Metin satır atlamasın */
+}
+
+/* Kaydırma aktif olduğunda */
+#cartButtonsScroll.active {
+    cursor: grabbing;
+}
+
+/* Mobil cihazlar için uyumluluk */
+@media (max-width: 768px) {
+    .grid-cols-12 {
+        grid-template-columns: 1fr;
+    }
+    
+    .col-span-7, .col-span-5 {
+        grid-column: span 12;
+    }
+}
+
+/* Barkod input büyük ekranlarda daha belirgin */
+@media (min-width: 1024px) {
+    #barcodeInput {
+        font-size: 1.1rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Select2 özelleştirmeleri */
+.select2-container--open .select2-dropdown--below {
+    margin-top: 5px;
+    border: 1px solid #3b82f6 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.select2-container--open .select2-dropdown--above {
+    margin-bottom: 5px;
+    border: 1px solid #3b82f6 !important;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.select2-container--default .select2-results__option {
+    padding: 8px 12px;
+    transition: background-color 0.2s;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #3b82f6 !important;
+    color: white !important;
+}
+
+.select2-results__option small {
+    display: block;
+    font-size: 0.8em;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.select2-results__option--highlighted small {
+    color: #f3f4f6 !important;
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+    max-height: 250px;
+    scrollbar-width: thin;
+}
+
+.select2-selection__clear {
+    margin-right: 10px;
+    color: #9ca3af;
+    font-weight: bold;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #111827;
+    line-height: 1.5;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #6b7280;
+}
+
+.select2-search--dropdown {
+    padding: 8px !important;
+}
+
+.select2-search--dropdown .select2-search__field {
+    border: 1px solid #d1d5db !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+    font-size: 0.95rem !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.2s !important;
+}
+
+.select2-search--dropdown .select2-search__field:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3) !important;
+    outline: none !important;
+}
+
+/* Select2 sonuçlarında vurgulama */
+.select2-results__option--highlighted small {
+    opacity: 0.9;
+}
+
+/* Select2 giriş alanına otomatik odaklanma için */
+.select2-search--dropdown .select2-search__field:focus::placeholder {
+    opacity: 0.5;
+}
+
+/* Select2 seçilen öğe stilini geliştir */
+.select2-container--default .select2-selection--single {
+    border: 2px solid #d1d5db !important;
+    transition: border-color 0.2s !important;
+} 
