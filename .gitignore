@@ -1,0 +1,38 @@
+# Render klasörü - test dosyaları
+render/
+
+# Uploads klasörü - yüklenen dosyalar
+uploads/
+
+# IDE dosyaları
+.idea/
+.vscode/
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Log dosyaları
+*.log
+
+# Geçici dosyalar
+*.tmp
+*.temp
+
+# Veritabanı yedekleri
+*.sql
+*.db
+
+# Konfigürasyon dosyaları (hassas bilgiler içerebilir)
+config.php
+.env
+
+# Node modules (eğer varsa)
+node_modules/
+
+# Composer vendor (eğer varsa)
+vendor/
+
+# Cache dosyaları
+cache/
+tmp/

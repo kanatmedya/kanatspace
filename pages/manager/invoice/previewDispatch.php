@@ -128,7 +128,7 @@ $rowCli = $resCli->fetch_array();
                     </div>
                 </div>
                 <div>
-                    <div class="text-2xl font-semibold uppercase" style="">Fatura</div>
+                    <div class="text-2xl font-semibold uppercase">Fatura</div>
                 </div>
             </div>
 

@@ -7,9 +7,10 @@ $dbname = "u490326670_workspace";
 $servername = "localhost";
 
 // Otomatik ortam tespiti
-function detectEnvironment() {
-    // Yöntem 1: Server hostname kontrolü
-    $hostname = gethostname();
+if (!function_exists('detectEnvironment')) {
+    function detectEnvironment() {
+        // Yöntem 1: Server hostname kontrolü
+        $hostname = gethostname();
     
     // Yöntem 2: IP adresi kontrolü
     $serverIP = $_SERVER['SERVER_ADDR'] ?? '';
@@ -52,6 +53,7 @@ function detectEnvironment() {
     
     // Eğer herhangi bir local gösterge varsa local ortam
     return in_array(true, $localIndicators) ? 'local' : 'server';
+    }
 }
 
 $server = detectEnvironment();
