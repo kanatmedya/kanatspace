@@ -68,7 +68,7 @@ try {
             $authorFullName = $authorName . ' ' . $authorSurName;
         }
 
-        $profilePicture = $profilePicture ? $profilePicture : 'assets/media/users/profile/default.jpg';
+        $profilePicture = $profilePicture ? $profilePicture : 'uploads/users/profile/default.jpg';
 
         // soundNotify kontrolü
         if ($row['soundNotify'] == 0) {

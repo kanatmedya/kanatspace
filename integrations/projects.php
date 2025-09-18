@@ -140,7 +140,7 @@ function createNotification($comment_id, $related_project, $comment_user_id, $co
     if (!empty($users_to_notify)) {
         $title = "Yeni Yorum!";
         $body = "Bir projeye yeni yorum yapıldı: " . substr($comment_text, 0, 50) . "...";
-        $icon = "https://work.kanatmedya.com/assets/media/system/kanatmedyafavicon.ico";
+        $icon = "https://work.kanatmedya.com/uploads/logo/kanatmedyafavicon.ico";
         $click_action = "https://work.kanatmedya.com/project?id=$related_project";
 
         if (function_exists('sendPushNotify')) {

@@ -79,7 +79,7 @@ if (isset($_SESSION['status'])) {
           <!-- Login form -->
           <form class="login-form" id="loginForm" method="POST">
             <div class="imgcontainer">
-                                    <img class="ml-[5px] flex-none" style="width:30px" src="assets/media/system/kanatmedyafavicon.ico" alt="image">
+                                    <img class="ml-[5px] flex-none" style="width:30px" src="uploads/logo/kanatmedyafavicon.ico" alt="image">
                                     <span class="align-middle text-2xl font-semibold ltr:ml-1.5 rtl:mr-1.5 dark:text-white-light lg:inline"><strong>Kanat Space</strong></span>
             </div>
             <div class="input-control">

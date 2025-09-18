@@ -90,7 +90,7 @@ function sendPushNotification(notification) {
         body: JSON.stringify({
             title: notification.author,
             body: notification.comText,
-            icon: 'assets/media/system/icon-512x512.png',
+            icon: 'uploads/logo/icon-512x512.png',
             url: 'project?id=' + notification.projectID
         })
     });
